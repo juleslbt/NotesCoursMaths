@@ -1,3 +1,5 @@
+*.dvi
+*.ps
 *.aux
 *.bbl
 *.bcf
