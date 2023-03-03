@@ -1,0 +1,34 @@
+\section{Motivations : les formes locales et intégrales}
+En physique, il est courant qu'une loi puisse-t-être formulée de deux façons différentes, on parle de forme intégrale et de forme locale. La forme intégrale d'une loi physique se présente comme une égalité entre plusieurs quantité mesurer sur un volume\footnote{On parle ici de volume car le cas classique est de considérer un espace à 3 dimensions, mais il peu en fait s'agir de n'importe quel espace.}. C'est une approche assez instinctive, puisqu'elle est relative aux phénomène macroscopique : la masse d'une roche, le nombre de personnes qui sortent d'une pièce ou l'énergie thermique contenue dans une planète sont autant de valeurs intégrales. D'autre part, la forme locale d'une équation est une forme qui ne se réfère par à un volume (comme une roche, une pièce ou une planète), mais à un point. Plus précisément, une loi locale est vraie en tous points de l'espace. Il s'agit de donner l'influence d'un point sur un phénomène, autrement dit quelle interaction a lieu entre ce point et le champ que l'on observe, ce point est-il le centre d'une rotation ? Attire-t-il le champ, ou à l'inverse, le repousse-t-il\footnote{On parle alors de point de convergence (resp. de divergence).} ? 
+Dans cette partie, il est principalement question d'intégrer des fonctions de plusieurs variables, étape indispensable au passage d'expression locales aux expressions intégrales. La procédure inverse, le passage d'une expression intégrale à une expression locale, est plus délicate et est traitée dans la partie \ref{cha:les-operateurs-de}.
+
+\section{Intégrales multiples}
+Une intégrale de volume peut être vu comme triple, puisqu'il est nécessaire de sommer les éléments sur chacune des trois dimensions. Prenons l'exemple le plus simple du volume. Un éléments de volume $dV$ pourrait être vu comme la forme locale (et triviale) du volume : cela correspond au volume occupé par un point. Un objet étant un ensemble de point, son volume V est la somme des volumes dV de l'ensemble des points qui le constitue. Il est courant de nommer V à la fois l'ensemble et le volume de cet ensemble, dans ce cas on a :
+\begin{equation}
+    \label{intVol}
+    V = \iiint_{V} dV
+\end{equation}
+L'equation\eqref{intVol} est toujours vraie, et c'est systématiquement cette forme qu'on cherche à utiliser pour calculer un volume. Se pose alors trois problèmes, quel est l'expression du volume d'un point dV, comment traduire le domaine V en 3 paires de bornes d'intégrations, et comment calculer une intégrale triple. 
+\subsection{Expression de dV}
+Dans cette partie, la façon dont est déterminé dV pour n'importe quel système de coordonnées est donné, puis les expressions usuelles sont données.
+
+\begin{Prop}
+\label{propDefDV}
+Le volume dV est le volume obtenus par changement infinitésimal de chaque coordonnées. C'est aussi le produit de 3 longueurs dl. dl est la longueur parcourue par le point M lors de l'ajout d'un élément infinitésimal à l'une de ces coordonnée.
+\end{Prop}
+
+\textbf{Exemple}\newline
+Prenons le cas simple du système de coordonnées cartésienne. Soit un point M(x,y,z). Deux approches principales permettent de calculer dV. Pour commencer, voyons la méthode analytique qui consiste à trouver les longueurs associé au changement de la n-ième coordonnée $dl_{x_n}$ entre le point $M=(x,y,z)$ et $M'=(x+dx,y,z)$ ou $M'=(x,y+dy,z)$ ou $M'=(x,y,z+dz)$ (en fonction de la valeur de n voulue).
+\begin{equation}
+    dl_{x_1} = \lvert\lvert\overrightarrow{MM'}\rvert\rvert =  \lvert dx \rvert
+    %\sqrt{(x-(x+dx))^2+(y-y)^2+(z-z)^2} =
+\end{equation}
+En suivant le même raisonnement pour chaque coordonnée, on trouve que $dl_{x_n} = dx_n$. En prenant le produit, on obtient $dV=dx dy dz$.
+La deuxième approche consiste à faire un dessin et projeter le longueurs convenablement : 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.7]{Figures/dVCart.jpg}
+\caption{Un volume infinitésimal en coordonnées cartésiennes- extrait de  'https://www.cours-et-exercices.com/2016/05/systemes-des-coordonnees-aux-axes.html'}
+\end{center}
+\end{figure} 
